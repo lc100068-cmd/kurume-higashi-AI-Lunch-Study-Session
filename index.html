@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ランチAI勉強会｜答えるAIから、実行するAIへ</title>
+<meta name="description" content="2026年12月3日（木）久留米シティプラザで開催。スマホ1台で体験できる、MetaのAIエージェント「Muse」の勉強会。主催：久留米市東倫理法人会">
+<style>
+:root{--navy:#0a2d5e;--navy2:#124e96;--yellow:#ffc828;--light:#eef4fd;--dark:#1e232d;--gray:#5a6473}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;color:var(--dark);line-height:1.8;background:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;text-align:center;padding:56px 20px 48px}
+.badge{display:inline-block;background:var(--navy2);border-radius:999px;padding:4px 18px;font-size:14px;margin-bottom:22px}
+h1{font-size:44px;letter-spacing:.04em;line-height:1.3}
+.catch{color:var(--yellow);font-size:26px;font-weight:bold;margin-top:16px}
+.sub{font-size:19px;font-weight:bold;margin-top:6px}
+.lead{margin:26px auto 0;max-width:640px;font-size:16px;text-align:left}
+.summary{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
+.summary span{background:#fff;color:var(--navy);border-radius:999px;padding:3px 14px;font-size:14px;font-weight:bold}
+.cta{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:bold;font-size:19px;text-decoration:none;border-radius:999px;padding:14px 42px;margin-top:30px}
+.cta-note{font-size:13px;margin-top:10px;color:#c9d8f2}
+section{padding:52px 0 8px}
+h2{font-size:27px;color:var(--navy);text-align:center;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.cards{grid-template-columns:1fr}h1{font-size:34px}.catch{font-size:21px}}
+.card{border:2px solid var(--navy);border-radius:14px;padding:18px 20px}
+.card h3{color:var(--navy);font-size:18px;margin-bottom:6px}
+.card p{font-size:15px}
+.closing{text-align:center;margin-top:26px;font-size:16px}
+.intro-panel{background:var(--light);border-radius:16px;padding:26px 28px}
+.intro-panel .lead-line{font-size:17px;font-weight:bold;color:var(--navy);margin-bottom:14px}
+.points{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+.point{background:#fff;border-radius:12px;padding:14px 18px;font-size:15px}
+.point b{color:var(--navy)}
+.contrast{text-align:center;font-weight:bold;color:var(--navy);margin-top:20px;font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chips span{background:var(--navy);color:#fff;border-radius:999px;padding:3px 14px;font-size:14px}
+ul.todo{list-style:none;max-width:560px;margin:0 auto}
+ul.todo li{font-size:16px;padding:10px 4px;border-bottom:1px solid #e3e9f2}
+ul.todo li::before{content:"✔ ";color:var(--navy2);font-weight:bold}
+.muse-note{background:#fff9e6;border:1px solid #ecd27a;border-radius:12px;padding:16px 20px;font-size:15px;max-width:640px;margin:26px auto 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border:1px solid #d5deeb;padding:10px 14px;text-align:left}
+th{background:var(--light);color:var(--navy);width:32%;white-space:nowrap}
+.lecturer{text-align:center;font-size:16px;max-width:640px;margin:0 auto}
+.faq{max-width:680px;margin:0 auto}
+.faq dt{font-weight:bold;color:var(--navy);margin-top:16px}
+.faq dd{font-size:15px;margin-top:4px}
+.final{background:var(--navy);color:#fff;text-align:center;padding:52px 20px;margin-top:56px}
+.final h2{color:#fff}
+footer{background:var(--navy);color:#c9d8f2;text-align:center;font-size:13px;padding:0 20px 34px}
+</style>
+</head>
+<body>
+<header>
+<div class="badge">主催：久留米市東倫理法人会</div>
+<h1>ランチAI勉強会</h1>
+<p class="catch">答えるAIから、実行するAIへ</p>
+<p class="sub">Museがあなたの秘書とSNS担当になる</p>
+<p class="lead">スマホ1台でOK。むずかしい設定はいりません。ランチを囲んで交流しながら、講師と一緒に手を動かして、最新のAIを体験してみましょう。「AIって、こんなに簡単に使えるんだ」を実感できる時間です。</p>
+<div class="summary"><span>2026年12月3日（木）</span><span>13:00 受付開始</span><span>久留米シティプラザ</span><span>参加費 1,000円</span><span>定員 20名</span></div>
+<a class="cta" href="https://forms.gle/yjCurwV7TPWvFfb98">参加を申し込む</a>
+<p class="cta-note">定員20名です。お早めのお申し込みをおすすめします。</p>
+</header>
+
+<section><div class="wrap">
+<h2>こんなお悩みありませんか？</h2>
+<div class="cards">
+<div class="card"><h3>AIの使い方が分からない</h3><p>触ってみたけど「質問に答えてもらうだけ」で終わっている。何から始めればいいか分からない。</p></div>
+<div class="card"><h3>日々の小さな作業に追われている</h3><p>予定の確認、メールの処理、調べもの…。本業以外の作業に、毎日時間を取られている。</p></div>
+<div class="card"><h3>SNS投稿が大変で続かない</h3><p>ネタが浮かばない、文章に時間がかかる。やらなきゃと思いながら、結局止まってしまう。</p></div>
+<div class="card"><h3>広報に手が回らない</h3><p>チラシや告知文を毎回一から作るのは大変。広報も集客も、担当は自分ひとり。</p></div>
+</div>
+<p class="closing">1つでも当てはまったら、この勉強会はあなたのための時間です。<br>ランチを囲んだ、経営者同士の情報交換も楽しめます。</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Muse（ミューズ）とは？</h2>
+<div class="intro-panel">
+<p class="lead-line">Museは、InstagramやFacebookを運営するMeta社の、パーソナルAIエージェントです。</p>
+<div class="points">
+<div class="point"><b>① アメリカで話題の新しいAI</b><br>2026年9月にアメリカで登場し、大きな話題に。日本でも提供が始まったばかりです。</div>
+<div class="point"><b>② 答えるだけじゃなく、実行する</b><br>カレンダー・メール・SNSと連携して、質問に答えるだけでなく、実際の作業まで進めてくれます。</div>
+<div class="point"><b>③ あなた専用の、安心なAI</b><br>あなたの事業や大切なことを覚えているので、「昨日の続き」から頼めます。大事な操作は必ず確認を取るので、勝手に投稿・送信される心配はありません。</div>
+</div>
+<p class="contrast">ChatGPTが「相談相手」なら、Museは「隣で手伝う支援者」です。</p>
+<div class="chips"><span>予定の確認</span><span>メールの要約</span><span>調べもののまとめ</span><span>チラシ・告知文づくり</span><span>SNS投稿のサポート</span><span>毎日の定期タスク</span></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>当日の内容</h2>
+<p style="text-align:center;margin-bottom:14px">講師と一緒に、スマホで実際に操作しながら体験します。</p>
+<ul class="todo">
+<li>カレンダーで予定を確認してみる</li>
+<li>長いメールを要約してみる</li>
+<li>調べものを、まとめてもらう</li>
+<li>チラシ・告知文の原稿を作ってみる</li>
+<li>Instagram／Threadsの投稿ネタと下書きを作ってみる</li>
+<li>1週間分の投稿案まで作ってみる</li>
+<li>「承認してから投稿する」安心の流れも体験</li>
+</ul>
+<div class="muse-note">※実は、このページの文章も、チラシも、Museが作っています。当日のデモは、その「働きぶり」そのものです。</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>タイムスケジュール</h2>
+<table>
+<tr><th>13:00</th><td>受付開始</td></tr>
+<tr><th>13:30</th><td>ランチタイム（交流）</td></tr>
+<tr><th>14:00</th><td>セミナー開始</td></tr>
+<tr><th>15:30</th><td>終了</td></tr>
+<tr><th>16:00</th><td>退出</td></tr>
+</table>
+</div></section>
+
+<section><div class="wrap">
+<h2>講師紹介</h2>
+<p class="lecturer"><b>大川（オオカワ）</b><br>佐賀でAI漫画販促とAI活用支援を行い、IT・AIが苦手な起業家・個人事業主・店舗経営者を支援。AI漫画の販促制作100件以上、行政向け制作実績あり。AIスクール講師。</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>開催概要</h2>
+<table>
+<tr><th>イベント名</th><td>ランチAI勉強会</td></tr>
+<tr><th>日時</th><td>2026年12月3日（木）13:00 受付開始（14:00 セミナー開始）</td></tr>
+<tr><th>会場</th><td>久留米シティプラザ（久留米市六ツ門町8-1）※有料駐車場あり</td></tr>
+<tr><th>参加費</th><td>1,000円</td></tr>
+<tr><th>定員</th><td>20名</td></tr>
+<tr><th>主催</th><td>久留米市東倫理法人会</td></tr>
+<tr><th>お問合せ</th><td>0942-40-7250（久留米市東倫理法人会）</td></tr>
+</table>
+</div></section>
+
+<section><div class="wrap">
+<h2>よくある質問</h2>
+<dl class="faq">
+<dt>Q. AIをほとんど使ったことがありません。大丈夫ですか？</dt>
+<dd>A. 大丈夫です。当日はデモと体験が中心で、専門用語はできるだけ使わずに進めます。「初めてAIの活用を体験する」方にこそおすすめです。</dd>
+<dt>Q. 申し込みはどうすればいいですか？</dt>
+<dd>A. このページの申込ボタンからフォームにご記入ください。定員20名のため、定員に達し次第、受付を締め切る場合があります。</dd>
+</dl>
+</div></section>
+
+<div class="final">
+<h2>AIを「知っている」から、「使えている」へ。</h2>
+<p>まずは体験してみることが一番の近道です。<br>ランチを囲みながら、Museが働く様子を一緒に見てみませんか。</p>
+<a class="cta" href="https://forms.gle/yjCurwV7TPWvFfb98">参加を申し込む（定員20名）</a>
+</div>
+<footer>主催：久留米市東倫理法人会／お問合せ：0942-40-7250</footer>
+</body>
+</html>
