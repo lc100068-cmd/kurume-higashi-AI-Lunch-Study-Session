@@ -9,6 +9,8 @@
 - 主催・お問合せ: 久留米市東倫理法人会（0942-40-7250）
 - 申込フォーム: https://forms.gle/GLARXPy4xrpaPx6F6
 
+[LPを見る](https://lc100068-cmd.github.io/kurume-higashi-AI-Lunch-Study-Session/)
+
 ## 編集
 
 静的HTMLサイトです。本文と見た目は `index.html`、画像は `assets/` にあります。
@@ -18,4 +20,4 @@
 - `assets/favicon.svg` … ファビコン
 
 申込先を変えるときは、`index.html` 内の `forms.gle` のリンク（3か所）とQRコードを差し替えてください。
-GitHub Pagesで公開する場合は、mainブランチのルートから配信します。
+GitHub Pagesはmainブランチのルートから配信しています。
