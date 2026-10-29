@@ -4,150 +4,423 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ランチAI勉強会｜答えるAIから、実行するAIへ</title>
-<meta name="description" content="2026年12月3日（木）久留米シティプラザで開催。スマホ1台で体験できる、MetaのAIエージェント「Muse」の勉強会。主催：久留米市東倫理法人会">
+<meta name="description" content="2026年12月3日（木）久留米シティプラザで開催。スマホ1台で体験できる、パーソナルAIエージェント「Muse」の勉強会。参加費1,000円・定員20名。主催：久留米市東倫理法人会">
+<meta property="og:title" content="ランチAI勉強会｜答えるAIから、実行するAIへ">
+<meta property="og:description" content="Museがあなたの秘書とSNS担当になる。2026年12月3日（木）久留米シティプラザ／参加費1,000円・定員20名">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/muse-hero.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0a2d5e;--navy2:#124e96;--yellow:#ffc828;--light:#eef4fd;--dark:#1e232d;--gray:#5a6473}
+:root{
+  --navy:#0b2a55;--ink:#15294a;--blue:#1667e8;--blue-deep:#0f52c4;
+  --sky:#eaf2fd;--sky2:#f5f8fd;--line:#c9d7ec;--deco:#c3d4ee;--muted:#4c5a72;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;color:var(--dark);line-height:1.8;background:#fff}
-.wrap{max-width:860px;margin:0 auto;padding:0 20px}
-header{background:var(--navy);color:#fff;text-align:center;padding:56px 20px 48px}
-.badge{display:inline-block;background:var(--navy2);border-radius:999px;padding:4px 18px;font-size:14px;margin-bottom:22px}
-h1{font-size:44px;letter-spacing:.04em;line-height:1.3}
-.catch{color:var(--yellow);font-size:26px;font-weight:bold;margin-top:16px}
-.sub{font-size:19px;font-weight:bold;margin-top:6px}
-.lead{margin:26px auto 0;max-width:640px;font-size:16px;text-align:left}
-.summary{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
-.summary span{background:#fff;color:var(--navy);border-radius:999px;padding:3px 14px;font-size:14px;font-weight:bold}
-.cta{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:bold;font-size:19px;text-decoration:none;border-radius:999px;padding:14px 42px;margin-top:30px}
-.cta-note{font-size:13px;margin-top:10px;color:#c9d8f2}
-section{padding:52px 0 8px}
-h2{font-size:27px;color:var(--navy);text-align:center;margin-bottom:28px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:640px){.cards{grid-template-columns:1fr}h1{font-size:34px}.catch{font-size:21px}}
-.card{border:2px solid var(--navy);border-radius:14px;padding:18px 20px}
-.card h3{color:var(--navy);font-size:18px;margin-bottom:6px}
-.card p{font-size:15px}
-.closing{text-align:center;margin-top:26px;font-size:16px}
-.intro-panel{background:var(--light);border-radius:16px;padding:26px 28px}
-.intro-panel .lead-line{font-size:17px;font-weight:bold;color:var(--navy);margin-bottom:14px}
-.points{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
-.point{background:#fff;border-radius:12px;padding:14px 18px;font-size:15px}
-.point b{color:var(--navy)}
-.contrast{text-align:center;font-weight:bold;color:var(--navy);margin-top:20px;font-size:17px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
-.chips span{background:var(--navy);color:#fff;border-radius:999px;padding:3px 14px;font-size:14px}
-ul.todo{list-style:none;max-width:560px;margin:0 auto}
-ul.todo li{font-size:16px;padding:10px 4px;border-bottom:1px solid #e3e9f2}
-ul.todo li::before{content:"✔ ";color:var(--navy2);font-weight:bold}
-.muse-note{background:#fff9e6;border:1px solid #ecd27a;border-radius:12px;padding:16px 20px;font-size:15px;max-width:640px;margin:26px auto 0}
-table{width:100%;border-collapse:collapse;font-size:15px}
-th,td{border:1px solid #d5deeb;padding:10px 14px;text-align:left}
-th{background:var(--light);color:var(--navy);width:32%;white-space:nowrap}
-.lecturer{text-align:center;font-size:16px;max-width:640px;margin:0 auto}
-.faq{max-width:680px;margin:0 auto}
-.faq dt{font-weight:bold;color:var(--navy);margin-top:16px}
-.faq dd{font-size:15px;margin-top:4px}
-.final{background:var(--navy);color:#fff;text-align:center;padding:52px 20px;margin-top:56px}
-.final h2{color:#fff}
-footer{background:var(--navy);color:#c9d8f2;text-align:center;font-size:13px;padding:0 20px 34px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.ai{color:var(--blue)}
+
+/* 背景の線画アイコン（チラシの雰囲気） */
+.deco{position:absolute;color:var(--deco);pointer-events:none;z-index:0}
+.deco svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== ヒーロー ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--sky2) 100%)}
+.hero-inner{position:relative;max-width:1080px;margin:0 auto;padding:28px 24px 0;min-height:600px}
+.org{position:relative;z-index:2;display:inline-block;font-weight:700;color:var(--navy);font-size:15px;letter-spacing:.06em;padding-bottom:10px;border-bottom:1.5px solid var(--navy);min-width:min(460px,100%)}
+.hero-photo{position:absolute;top:0;right:0;width:56%;max-width:600px;z-index:1;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%),linear-gradient(to bottom,#000 70%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 22%),linear-gradient(to bottom,#000 70%,transparent 100%);mask-composite:intersect}
+.hero-photo img{width:100%;height:auto}
+.hero-copy{position:relative;z-index:2;max-width:640px}
+h1{font-weight:900;color:var(--navy);font-size:clamp(64px,10.4vw,124px);line-height:1.06;letter-spacing:-.01em;margin-top:22px}
+h1 .ai{letter-spacing:-.04em}
+.catch-rule{height:1.5px;background:var(--navy);width:min(480px,80%);margin:22px 0 18px}
+.catch{font-weight:900;color:var(--navy);font-size:clamp(25px,3.6vw,40px);line-height:1.35;letter-spacing:.01em}
+.sub{font-weight:500;color:var(--ink);font-size:clamp(17px,2.2vw,24px);margin-top:4px}
+.lead{margin-top:20px;font-size:16px;color:var(--muted);max-width:500px}
+
+/* 開催情報 */
+.info{position:relative;z-index:2;margin-top:36px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:20px;padding:28px 32px;display:grid;grid-template-columns:1.1fr 1px 1fr;gap:32px;box-shadow:0 18px 40px -28px rgba(11,42,85,.45)}
+.info .vr{background:var(--line)}
+.k{font-weight:700;color:var(--navy);font-size:15px;letter-spacing:.06em}
+.date{display:flex;align-items:baseline;gap:6px;color:var(--navy);font-family:var(--serif);font-weight:700;line-height:1;margin:6px 0 14px;flex-wrap:wrap}
+.date .y{font-size:26px}
+.date .md{font-size:clamp(64px,8vw,92px);font-weight:900;letter-spacing:-.02em}
+.date .w{font-family:var(--sans);font-size:30px;font-weight:700}
+.times{border-top:1.5px solid var(--navy);padding-top:12px}
+.times p{display:flex;gap:18px;align-items:baseline;font-weight:500;font-size:18px}
+.times b{font-family:var(--serif);color:var(--blue);font-size:26px;font-weight:700;min-width:84px}
+.fee{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.fee .v{color:var(--blue);font-weight:900;font-size:clamp(40px,5vw,54px);line-height:1.1}
+.fee .v small{font-size:.7em}
+.cap{display:flex;align-items:baseline;gap:10px;margin-top:4px}
+.cap .v{color:var(--blue);font-weight:900;font-size:38px;line-height:1.1}
+.cap .u{font-weight:700;font-size:20px;color:var(--navy)}
+.venue{border-top:1.5px solid var(--navy);margin-top:14px;padding-top:14px}
+.venue .name{font-weight:900;color:var(--navy);font-size:clamp(24px,2.8vw,30px);line-height:1.3}
+.venue .addr{font-size:15px;color:var(--muted)}
+.venue .addr a{font-size:14px;margin-left:6px}
+
+.cta-row{position:relative;z-index:2;display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:32px 0 56px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--blue);color:#fff;font-weight:700;font-size:19px;text-decoration:none;border-radius:999px;padding:17px 44px;box-shadow:0 12px 24px -12px rgba(22,103,232,.8);transition:background .2s,transform .2s}
+.cta:hover{background:var(--blue-deep);transform:translateY(-1px)}
+.cta svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.cta-note{font-size:14px;color:var(--muted)}
+
+/* ===== セクション共通 ===== */
+section{position:relative;padding:88px 0;overflow:hidden}
+section.tint{background:var(--sky2)}
+.label{display:flex;align-items:center;gap:14px;color:var(--blue);font-weight:700;font-size:15px;letter-spacing:.08em;margin-bottom:10px}
+.label::after{content:"";flex:1;height:1px;background:var(--line);max-width:420px}
+h2{font-weight:900;color:var(--navy);font-size:clamp(26px,3.6vw,38px);line-height:1.4;margin-bottom:28px}
+section .wrap{position:relative;z-index:1}
+
+/* Muse とは */
+.muse-head{display:flex;align-items:center;gap:16px;margin-bottom:6px}
+.muse-logo{width:76px;height:auto;color:var(--blue)}
+.muse-head p{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:clamp(24px,3vw,32px)}
+.muse-copy br.sp{display:none}
+.muse-copy{font-family:var(--serif);font-weight:900;color:var(--navy);font-size:clamp(30px,5.4vw,62px);line-height:1.35;letter-spacing:.01em;margin:6px 0 22px}
+.muse-body{font-family:var(--serif);font-weight:600;font-size:clamp(16px,1.9vw,20px);line-height:2;color:var(--ink);max-width:760px}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.point{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 24px 22px}
+.point .n{font-family:var(--serif);color:var(--blue);font-weight:900;font-size:30px;line-height:1}
+.point h3{color:var(--navy);font-size:18px;font-weight:900;margin:10px 0 6px;line-height:1.5}
+.point p{font-size:15px;color:var(--muted)}
+.contrast{margin-top:34px;padding:22px 26px;border-left:4px solid var(--blue);background:var(--sky);border-radius:0 14px 14px 0;font-weight:700;color:var(--navy);font-size:clamp(16px,2vw,19px)}
+
+/* お悩み */
+.worries{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.worry{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 22px}
+.worry .ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--sky);display:grid;place-items:center;color:var(--blue)}
+.worry .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.worry h3{color:var(--navy);font-size:17px;font-weight:900;line-height:1.5}
+.worry p{font-size:15px;color:var(--muted);margin-top:4px}
+.closing{margin-top:30px;font-weight:700;color:var(--navy);font-size:17px;text-align:center}
+
+/* こんな方に / セミナーの内容（チラシの下段レイアウト） */
+.for{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px}
+.for span{background:var(--navy);color:#fff;font-weight:700;border-radius:999px;padding:8px 22px;font-size:17px}
+.contents{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.contents li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:16px 4px;border-bottom:1px solid var(--line)}
+.contents li .no{font-family:var(--serif);font-weight:900;color:var(--blue);font-size:20px;line-height:1.5;min-width:28px}
+.contents li b{display:block;color:var(--navy);font-size:17px;line-height:1.5}
+.contents li span{font-size:14px;color:var(--muted)}
+.note{margin-top:30px;background:#fff;border:1px dashed var(--blue);border-radius:14px;padding:16px 22px;font-size:15px;color:var(--ink)}
+
+/* タイムスケジュール */
+.timeline{list-style:none;max-width:680px}
+.timeline li{position:relative;display:grid;grid-template-columns:96px 1fr;gap:20px;padding:0 0 26px}
+.timeline li::before{content:"";position:absolute;left:107px;top:12px;bottom:-12px;width:1.5px;background:var(--line)}
+.timeline li:last-child::before{display:none}
+.timeline li::after{content:"";position:absolute;left:102px;top:8px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.timeline time{font-family:var(--serif);font-weight:700;color:var(--blue);font-size:24px;line-height:1.2}
+.timeline div{padding-left:18px;font-weight:700;color:var(--navy);font-size:18px;line-height:1.5}
+.timeline div small{display:block;font-weight:400;color:var(--muted);font-size:14px}
+
+/* 講師 */
+.lecturer{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
+.lecturer .av{width:84px;height:84px;border-radius:50%;background:var(--sky);display:grid;place-items:center;color:var(--blue)}
+.lecturer .av svg{width:72px;height:auto}
+.lecturer h3{color:var(--navy);font-weight:900;font-size:22px}
+.lecturer h3 small{font-size:15px;font-weight:500;color:var(--muted);margin-left:6px}
+.lecturer p{font-size:15px;color:var(--ink);margin-top:6px}
+
+/* 開催概要 */
+.overview{width:100%;border-collapse:collapse;font-size:16px;background:#fff}
+.overview th,.overview td{border-bottom:1px solid var(--line);padding:16px 10px;text-align:left;vertical-align:top}
+.overview tr:first-child th,.overview tr:first-child td{border-top:1.5px solid var(--navy)}
+.overview th{color:var(--blue);font-weight:700;width:150px;white-space:nowrap}
+
+/* FAQ */
+.faq{max-width:780px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;display:flex;gap:14px;align-items:baseline;font-weight:700;color:var(--navy);font-size:17px;padding:16px 0}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:var(--serif);font-weight:900;color:var(--blue);font-size:22px}
+.faq summary::after{content:"＋";margin-left:auto;color:var(--blue);font-weight:700}
+.faq details[open] summary::after{content:"－"}
+.faq .a{display:flex;gap:14px;padding:0 0 18px;font-size:15px;color:var(--ink)}
+.faq .a::before{content:"A";font-family:var(--serif);font-weight:900;color:var(--navy);font-size:22px;line-height:1.3}
+
+/* 最終CTA */
+.final{background:var(--navy);color:#fff;padding:80px 0}
+.final-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.final h2{color:#fff;margin-bottom:14px}
+.final h2 .ai{color:#6ea8ff}
+.final p{color:#d3def2;font-size:16px}
+.final .cta{margin-top:28px;background:#fff;color:var(--navy);box-shadow:none}
+.final .cta:hover{background:var(--sky)}
+.final .seats{margin-top:12px;font-size:14px;color:#b8c8e6}
+.qr{background:#fff;border-radius:18px;padding:18px 18px 14px;text-align:center;color:var(--navy)}
+.qr .t{font-weight:700;color:var(--blue);font-size:15px;margin-bottom:8px;letter-spacing:.06em}
+.qr img{width:180px;height:180px;image-rendering:pixelated;margin:0 auto}
+.qr small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+
+footer{background:#081f42;color:#fff}
+.foot{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;padding:24px 24px}
+.foot .r{font-size:14px;color:#c9d6ee;letter-spacing:.06em}
+.foot .o{font-weight:900;font-size:22px;letter-spacing:.04em}
+.foot a{color:#fff;font-weight:700;font-size:24px;text-decoration:none;letter-spacing:.04em}
+.foot .bar{width:1px;height:30px;background:rgba(255,255,255,.35)}
+
+/* スマホ用 固定申込ボタン */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);border-top:1px solid var(--line);box-shadow:0 -8px 24px -16px rgba(11,42,85,.5);display:none;transition:transform .25s}
+.sticky.hide{transform:translateY(110%)}
+.sticky .cta{width:100%;padding:14px 20px;font-size:17px}
+
+@media (max-width:860px){
+  .hero-inner{min-height:0;padding-top:20px}
+  .hero-photo{position:relative;width:calc(100% + 48px);max-width:none;margin:14px -24px 0;
+    -webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,transparent 100%)}
+  .hero-photo img{height:min(72vw,360px);object-fit:cover;object-position:50% 20%}
+  h1{margin-top:-34px}
+  .deco{display:none}
+  .info{grid-template-columns:1fr;gap:22px;padding:24px 22px}
+  .info .vr{height:1px}
+  .points{grid-template-columns:1fr}
+  .final-grid{grid-template-columns:1fr}
+  .qr{display:none}
+}
+@media (max-width:640px){
+  .wrap,.hero-inner{padding-left:16px;padding-right:16px}
+  .hero-photo{width:calc(100% + 32px);margin:12px -16px 0}
+  .org{font-size:13px}
+  section{padding:64px 0}
+  .worries,.contents{grid-template-columns:1fr}
+  .cta-row{padding:26px 0 44px}
+  .cta-row .cta,.final .cta{width:100%}
+  .muse-copy{font-size:27px}
+  .muse-copy br.sp{display:inline}
+  .times p{font-size:16px;gap:12px}
+  .times b{font-size:22px;min-width:72px}
+  .lecturer{grid-template-columns:1fr;padding:22px}
+  .overview th{width:88px;padding-right:6px}
+  .overview th,.overview td{font-size:15px;padding:14px 6px}
+  .timeline li{grid-template-columns:76px 1fr;gap:14px}
+  .timeline li::before{left:87px}
+  .timeline li::after{left:82px}
+  .timeline time{font-size:21px}
+  .foot{gap:6px 18px}
+  .foot .bar{display:none}
+  .sticky{display:block}
+  body{padding-bottom:76px}
+}
 </style>
 </head>
 <body>
-<header>
-<div class="badge">主催：久留米市東倫理法人会</div>
-<h1>ランチAI勉強会</h1>
-<p class="catch">答えるAIから、実行するAIへ</p>
-<p class="sub">Museがあなたの秘書とSNS担当になる</p>
-<p class="lead">スマホ1台でOK。むずかしい設定はいりません。ランチを囲んで交流しながら、講師と一緒に手を動かして、最新のAIを体験してみましょう。「AIって、こんなに簡単に使えるんだ」を実感できる時間です。</p>
-<div class="summary"><span>2026年12月3日（木）</span><span>13:00 受付開始</span><span>久留米シティプラザ</span><span>参加費 1,000円</span><span>定員 20名</span></div>
-<a class="cta" href="https://forms.gle/yjCurwV7TPWvFfb98">参加を申し込む</a>
-<p class="cta-note">定員20名です。お早めのお申し込みをおすすめします。</p>
+
+<!-- 線画アイコン -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-doc" viewBox="0 0 48 56"><path d="M8 2h22l14 14v36a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M30 2v14h14M14 26h22M14 34h22M14 42h14"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 56 52"><rect x="3" y="7" width="50" height="42" rx="5"/><path d="M3 19h50M15 2v10M41 2v10M14 28h6M25 28h6M36 28h6M14 38h6M25 38h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 60 50"><path d="M6 3h48a3 3 0 0 1 3 3v28a3 3 0 0 1-3 3H24l-12 10v-10H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/><path d="M14 16h32M14 25h22"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 56 40"><rect x="3" y="3" width="50" height="34" rx="3"/><path d="M4 5l24 18L52 5"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 50 44"><path d="M3 41h44M9 41V27M19 41V19M29 41V23M39 41V9"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 64 40"><path d="M16 37h34a11 11 0 0 0 0-22 16 16 0 0 0-30-3A13 13 0 0 0 16 37z"/></symbol>
+  <symbol id="muse" viewBox="0 0 80 44"><path d="M5 37C9 26 13 15 18 11c4-3 6 1 5 7l-3 18c3-10 8-21 13-24 4-3 6 0 5 6l-3 18c3-10 8-21 13-24 4-2 6 1 5 6l-3 12c-1 5 1 7 5 4 5-4 9-11 12-18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="hero">
+  <span class="deco" style="width:44px;height:52px;left:2%;top:300px"><svg><use href="#i-doc"/></svg></span>
+  <span class="deco" style="width:46px;height:40px;left:55%;top:560px"><svg><use href="#i-bars"/></svg></span>
+  <span class="deco" style="width:54px;height:46px;right:3%;bottom:40px"><svg><use href="#i-doc"/></svg></span>
+  <div class="hero-inner">
+    <p class="org">主催：久留米市東倫理法人会</p>
+    <div class="hero-photo"><img src="assets/muse-hero.webp" alt="ヘッドホンをつけてノートパソコンに向かう、ふわふわのMuseのキャラクター" width="479" height="410"></div>
+    <div class="hero-copy">
+      <h1>ランチ<span class="ai">AI</span><br>勉強会</h1>
+      <div class="catch-rule"></div>
+      <p class="catch">答える<span class="ai">AI</span>から、実行する<span class="ai">AI</span>へ</p>
+      <p class="sub">Museがあなたの秘書とSNS担当になる</p>
+      <p class="lead">スマホ1台でOK。むずかしい設定はいりません。ランチを囲んで交流しながら、講師と一緒に手を動かして、最新のAIを体験してみましょう。</p>
+    </div>
+
+    <div class="info" id="info">
+      <div>
+        <p class="k">開催日時：</p>
+        <p class="date"><span class="y">2026年</span><span class="md">12.03</span><span class="w">（木）</span></p>
+        <div class="times">
+          <p><b>13:00</b>受付・ランチ交流会</p>
+          <p><b>14:00</b>セミナー開始</p>
+        </div>
+      </div>
+      <div class="vr" aria-hidden="true"></div>
+      <div>
+        <div class="fee"><span class="k">参加費：</span><span class="v"><small>¥</small>1,000</span></div>
+        <div class="cap"><span class="k">定員</span><span class="v">20</span><span class="u">名</span></div>
+        <div class="venue">
+          <p class="k">会場：</p>
+          <p class="name">久留米シティプラザ</p>
+          <p class="addr">（久留米市六ツ門町8-1）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B9%85%E7%95%99%E7%B1%B3%E3%82%B7%E3%83%86%E3%82%A3%E3%83%97%E3%83%A9%E3%82%B6" target="_blank" rel="noopener">地図を見る</a><br>※有料駐車場あり</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-row" id="hero-cta">
+      <a class="cta" href="https://forms.gle/GLARXPy4xrpaPx6F6" target="_blank" rel="noopener">参加を申し込む<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="cta-note">定員20名です。お早めのお申し込みをおすすめします。</p>
+    </div>
+  </div>
 </header>
 
-<section><div class="wrap">
-<h2>こんなお悩みありませんか？</h2>
-<div class="cards">
-<div class="card"><h3>AIの使い方が分からない</h3><p>触ってみたけど「質問に答えてもらうだけ」で終わっている。何から始めればいいか分からない。</p></div>
-<div class="card"><h3>日々の小さな作業に追われている</h3><p>予定の確認、メールの処理、調べもの…。本業以外の作業に、毎日時間を取られている。</p></div>
-<div class="card"><h3>SNS投稿が大変で続かない</h3><p>ネタが浮かばない、文章に時間がかかる。やらなきゃと思いながら、結局止まってしまう。</p></div>
-<div class="card"><h3>広報に手が回らない</h3><p>チラシや告知文を毎回一から作るのは大変。広報も集客も、担当は自分ひとり。</p></div>
-</div>
-<p class="closing">1つでも当てはまったら、この勉強会はあなたのための時間です。<br>ランチを囲んだ、経営者同士の情報交換も楽しめます。</p>
-</div></section>
+<main>
+<section class="tint" id="muse">
+  <span class="deco" style="width:96px;height:60px;right:6%;top:70px"><svg><use href="#i-cloud"/></svg></span>
+  <span class="deco" style="width:64px;height:54px;right:3%;top:380px"><svg><use href="#i-chat"/></svg></span>
+  <span class="deco" style="width:44px;height:52px;left:1%;top:420px"><svg><use href="#i-doc"/></svg></span>
+  <div class="wrap">
+    <div class="muse-head"><svg class="muse-logo" viewBox="0 0 80 44" aria-hidden="true"><use href="#muse"/></svg><p>Muse（ミューズ）とは</p></div>
+    <p class="muse-copy">あなたの「やりたい」を、<br class="sp">実行へ。</p>
+    <p class="muse-body">調べものも、予定の確認も、SNSの投稿も。<br>Museは、日々の仕事をサポートするパーソナルAIエージェント。<br>大切な操作はあなたに確認しながら、作業を進めます。</p>
 
-<section><div class="wrap">
-<h2>Muse（ミューズ）とは？</h2>
-<div class="intro-panel">
-<p class="lead-line">Museは、InstagramやFacebookを運営するMeta社の、パーソナルAIエージェントです。</p>
-<div class="points">
-<div class="point"><b>① アメリカで話題の新しいAI</b><br>2026年9月にアメリカで登場し、大きな話題に。日本でも提供が始まったばかりです。</div>
-<div class="point"><b>② 答えるだけじゃなく、実行する</b><br>カレンダー・メール・SNSと連携して、質問に答えるだけでなく、実際の作業まで進めてくれます。</div>
-<div class="point"><b>③ あなた専用の、安心なAI</b><br>あなたの事業や大切なことを覚えているので、「昨日の続き」から頼めます。大事な操作は必ず確認を取るので、勝手に投稿・送信される心配はありません。</div>
-</div>
-<p class="contrast">ChatGPTが「相談相手」なら、Museは「隣で手伝う支援者」です。</p>
-<div class="chips"><span>予定の確認</span><span>メールの要約</span><span>調べもののまとめ</span><span>チラシ・告知文づくり</span><span>SNS投稿のサポート</span><span>毎日の定期タスク</span></div>
-</div>
-</div></section>
+    <div class="points">
+      <div class="point"><p class="n">01</p><h3>アメリカで話題の<br>新しいAI</h3><p>InstagramやFacebookを運営するMeta社のAIエージェント。2026年9月にアメリカで登場し、日本でも提供が始まったばかりです。</p></div>
+      <div class="point"><p class="n">02</p><h3>答えるだけじゃなく、<br>実行する</h3><p>カレンダー・メール・SNSと連携して、質問に答えるだけでなく、実際の作業まで進めてくれます。</p></div>
+      <div class="point"><p class="n">03</p><h3>あなた専用の、<br>安心なAI</h3><p>あなたの事業や大切なことを覚えているので「昨日の続き」から頼めます。大事な操作は必ず確認を取るので、勝手に投稿・送信される心配はありません。</p></div>
+    </div>
+    <p class="contrast">ChatGPTが「相談相手」なら、Museは「隣で手伝う支援者」です。</p>
+  </div>
+</section>
 
-<section><div class="wrap">
-<h2>当日の内容</h2>
-<p style="text-align:center;margin-bottom:14px">講師と一緒に、スマホで実際に操作しながら体験します。</p>
-<ul class="todo">
-<li>カレンダーで予定を確認してみる</li>
-<li>長いメールを要約してみる</li>
-<li>調べものを、まとめてもらう</li>
-<li>チラシ・告知文の原稿を作ってみる</li>
-<li>Instagram／Threadsの投稿ネタと下書きを作ってみる</li>
-<li>1週間分の投稿案まで作ってみる</li>
-<li>「承認してから投稿する」安心の流れも体験</li>
-</ul>
-<div class="muse-note">※実は、このページの文章も、チラシも、Museが作っています。当日のデモは、その「働きぶり」そのものです。</div>
-</div></section>
+<section id="worries">
+  <span class="deco" style="width:56px;height:40px;right:4%;top:60px"><svg><use href="#i-mail"/></svg></span>
+  <div class="wrap">
+    <p class="label">こんなお悩みありませんか？</p>
+    <h2>AI、気になってはいるけれど…</h2>
+    <div class="worries">
+      <div class="worry"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01"/></svg></span><div><h3>AIの使い方が分からない</h3><p>触ってみたけど「質問に答えてもらうだけ」で終わっている。何から始めればいいか分からない。</p></div></div>
+      <div class="worry"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>日々の小さな作業に追われている</h3><p>予定の確認、メールの処理、調べもの…。本業以外の作業に、毎日時間を取られている。</p></div></div>
+      <div class="worry"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><path d="M16.5 7.5h.01"/></svg></span><div><h3>SNS投稿が大変で続かない</h3><p>ネタが浮かばない、文章に時間がかかる。やらなきゃと思いながら、結局止まってしまう。</p></div></div>
+      <div class="worry"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 10v4h3l6 4V6L7 10H4zM17 9a4 4 0 0 1 0 6"/></svg></span><div><h3>広報に手が回らない</h3><p>チラシや告知文を毎回一から作るのは大変。広報も集客も、担当は自分ひとり。</p></div></div>
+    </div>
+    <p class="closing">1つでも当てはまったら、この勉強会はあなたのための時間です。<br>ランチを囲んだ、経営者同士の情報交換も楽しめます。</p>
+  </div>
+</section>
 
-<section><div class="wrap">
-<h2>タイムスケジュール</h2>
-<table>
-<tr><th>13:00</th><td>受付開始</td></tr>
-<tr><th>13:30</th><td>ランチタイム（交流）</td></tr>
-<tr><th>14:00</th><td>セミナー開始</td></tr>
-<tr><th>15:30</th><td>終了</td></tr>
-<tr><th>16:00</th><td>退出</td></tr>
-</table>
-</div></section>
+<section class="tint" id="contents">
+  <span class="deco" style="width:56px;height:52px;right:5%;top:80px"><svg><use href="#i-cal"/></svg></span>
+  <span class="deco" style="width:60px;height:50px;left:2%;bottom:60px"><svg><use href="#i-chat"/></svg></span>
+  <div class="wrap">
+    <p class="label">こんな方に</p>
+    <div class="for"><span>AI初心者の方</span><span>経営者</span><span>個人事業主</span></div>
 
-<section><div class="wrap">
-<h2>講師紹介</h2>
-<p class="lecturer"><b>大川（オオカワ）</b><br>佐賀でAI漫画販促とAI活用支援を行い、IT・AIが苦手な起業家・個人事業主・店舗経営者を支援。AI漫画の販促制作100件以上、行政向け制作実績あり。AIスクール講師。</p>
-</div></section>
+    <p class="label">セミナーの内容</p>
+    <h2>講師と一緒に、スマホで実際に操作しながら体験します。</h2>
+    <ul class="contents">
+      <li><span class="no">01</span><div><b>カレンダー確認</b><span>今日・今週の予定を、話しかけるだけで確認</span></div></li>
+      <li><span class="no">02</span><div><b>メール要約</b><span>長いメールも、要点だけを短くまとめて把握</span></div></li>
+      <li><span class="no">03</span><div><b>調べもののまとめ</b><span>知りたいことを調べて、読みやすく整理</span></div></li>
+      <li><span class="no">04</span><div><b>チラシ作り</b><span>チラシ・告知文の原稿づくりを体験</span></div></li>
+      <li><span class="no">05</span><div><b>Instagram・Threadsのネタ出し</b><span>投稿ネタから1週間分の投稿案まで</span></div></li>
+      <li><span class="no">06</span><div><b>下書き作成から投稿まで</b><span>「承認してから投稿する」安心の流れも体験</span></div></li>
+    </ul>
+    <p class="note">※実は、このページの文章も、チラシも、Museが作っています。当日のデモは、その「働きぶり」そのものです。</p>
+  </div>
+</section>
 
-<section><div class="wrap">
-<h2>開催概要</h2>
-<table>
-<tr><th>イベント名</th><td>ランチAI勉強会</td></tr>
-<tr><th>日時</th><td>2026年12月3日（木）13:00 受付開始（14:00 セミナー開始）</td></tr>
-<tr><th>会場</th><td>久留米シティプラザ（久留米市六ツ門町8-1）※有料駐車場あり</td></tr>
-<tr><th>参加費</th><td>1,000円</td></tr>
-<tr><th>定員</th><td>20名</td></tr>
-<tr><th>主催</th><td>久留米市東倫理法人会</td></tr>
-<tr><th>お問合せ</th><td>0942-40-7250（久留米市東倫理法人会）</td></tr>
-</table>
-</div></section>
+<section id="schedule">
+  <div class="wrap">
+    <p class="label">タイムスケジュール</p>
+    <h2>12月3日（木）当日の流れ</h2>
+    <ol class="timeline">
+      <li><time>13:00</time><div>受付開始</div></li>
+      <li><time>13:30</time><div>ランチタイム<small>交流しながらお食事を楽しみます</small></div></li>
+      <li><time>14:00</time><div>セミナー開始<small>Museのデモと、スマホでの体験</small></div></li>
+      <li><time>15:30</time><div>終了</div></li>
+      <li><time>16:00</time><div>退出</div></li>
+    </ol>
+  </div>
+</section>
 
-<section><div class="wrap">
-<h2>よくある質問</h2>
-<dl class="faq">
-<dt>Q. AIをほとんど使ったことがありません。大丈夫ですか？</dt>
-<dd>A. 大丈夫です。当日はデモと体験が中心で、専門用語はできるだけ使わずに進めます。「初めてAIの活用を体験する」方にこそおすすめです。</dd>
-<dt>Q. 申し込みはどうすればいいですか？</dt>
-<dd>A. このページの申込ボタンからフォームにご記入ください。定員20名のため、定員に達し次第、受付を締め切る場合があります。</dd>
-</dl>
-</div></section>
+<section class="tint" id="lecturer">
+  <div class="wrap">
+    <p class="label">講師紹介</p>
+    <div class="lecturer">
+      <div class="av" aria-hidden="true"><svg viewBox="0 0 80 44"><use href="#muse"/></svg></div>
+      <div>
+        <h3>大川<small>（オオカワ）</small></h3>
+        <p>佐賀でAI漫画販促とAI活用支援を行い、IT・AIが苦手な起業家・個人事業主・店舗経営者を支援。AI漫画の販促制作100件以上、行政向け制作実績あり。AIスクール講師。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="final">
-<h2>AIを「知っている」から、「使えている」へ。</h2>
-<p>まずは体験してみることが一番の近道です。<br>ランチを囲みながら、Museが働く様子を一緒に見てみませんか。</p>
-<a class="cta" href="https://forms.gle/yjCurwV7TPWvFfb98">参加を申し込む（定員20名）</a>
-</div>
-<footer>主催：久留米市東倫理法人会／お問合せ：0942-40-7250</footer>
+<section id="overview">
+  <span class="deco" style="width:46px;height:40px;right:4%;top:90px"><svg><use href="#i-bars"/></svg></span>
+  <div class="wrap">
+    <p class="label">開催概要</p>
+    <table class="overview">
+      <tr><th>イベント名</th><td>ランチAI勉強会</td></tr>
+      <tr><th>日時</th><td>2026年12月3日（木）<br>13:00 受付・ランチ交流会／14:00 セミナー開始</td></tr>
+      <tr><th>会場</th><td>久留米シティプラザ（久留米市六ツ門町8-1）<br>※有料駐車場あり</td></tr>
+      <tr><th>参加費</th><td>1,000円</td></tr>
+      <tr><th>定員</th><td>20名</td></tr>
+      <tr><th>主催</th><td>久留米市東倫理法人会</td></tr>
+      <tr><th>お問合せ</th><td><a href="tel:0942407250">0942-40-7250</a>（久留米市東倫理法人会）</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="tint" id="faq">
+  <div class="wrap">
+    <p class="label">よくある質問</p>
+    <div class="faq">
+      <details open><summary>AIをほとんど使ったことがありません。大丈夫ですか？</summary><p class="a">大丈夫です。当日はデモと体験が中心で、専門用語はできるだけ使わずに進めます。「初めてAIの活用を体験する」方にこそおすすめです。</p></details>
+      <details><summary>申し込みはどうすればいいですか？</summary><p class="a">このページの申込ボタンからフォームにご記入ください。定員20名のため、定員に達し次第、受付を締め切る場合があります。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="apply">
+  <div class="wrap final-grid">
+    <div>
+      <h2>AIを「知っている」から、<br>「使えている」へ。</h2>
+      <p>まずは体験してみることが一番の近道です。<br>ランチを囲みながら、Museが働く様子を一緒に見てみませんか。</p>
+      <a class="cta" href="https://forms.gle/GLARXPy4xrpaPx6F6" target="_blank" rel="noopener">参加を申し込む<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="seats">2026年12月3日（木）久留米シティプラザ／参加費1,000円・定員20名</p>
+    </div>
+    <div class="qr">
+      <p class="t">申込はこちらから</p>
+      <img src="assets/form-qr.png" alt="申込フォームのQRコード" width="180" height="180">
+      <small>スマホで読み取れます</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot">
+    <span class="r">主催・お問合せ</span><span class="bar"></span>
+    <span class="o">久留米市東倫理法人会</span><span class="bar"></span>
+    <a href="tel:0942407250">0942-40-7250</a>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="cta" href="https://forms.gle/GLARXPy4xrpaPx6F6" target="_blank" rel="noopener">参加を申し込む（定員20名）<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+
+<script>
+// 申込ボタンが画面内にあるときは、スマホ用の固定ボタンを隠す
+(function(){
+  var bar=document.getElementById('sticky');
+  if(!('IntersectionObserver' in window)) return;
+  var visible=new Set();
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting ? visible.add(e.target) : visible.delete(e.target); });
+    bar.classList.toggle('hide', visible.size>0);
+  });
+  ['hero-cta','apply'].forEach(function(id){ io.observe(document.getElementById(id)); });
+})();
+</script>
 </body>
 </html>
