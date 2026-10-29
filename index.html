@@ -129,9 +129,9 @@ section .wrap{position:relative;z-index:1}
 .timeline div small{display:block;font-weight:400;color:var(--muted);font-size:14px}
 
 /* 講師 */
-.lecturer{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
-.lecturer .av{width:84px;height:84px;border-radius:50%;background:var(--sky);display:grid;place-items:center;color:var(--blue)}
-.lecturer .av svg{width:72px;height:auto}
+.lecturer{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
+.lecturer .av{width:180px;height:180px;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.lecturer .av img{width:100%;height:100%;object-fit:cover}
 .lecturer h3{color:var(--navy);font-weight:900;font-size:22px}
 .lecturer h3 small{font-size:15px;font-weight:500;color:var(--muted);margin-left:6px}
 .lecturer p{font-size:15px;color:var(--ink);margin-top:6px}
@@ -204,7 +204,9 @@ footer{background:#081f42;color:#fff}
   .muse-copy br.sp{display:inline}
   .times p{font-size:16px;gap:12px}
   .times b{font-size:22px;min-width:72px}
-  .lecturer{grid-template-columns:1fr;padding:22px}
+  .lecturer{grid-template-columns:1fr;padding:22px;justify-items:center;text-align:center}
+  .lecturer .av{width:200px;height:200px}
+  .lecturer p{text-align:left}
   .overview th{width:88px;padding-right:6px}
   .overview th,.overview td{font-size:15px;padding:14px 6px}
   .timeline li{grid-template-columns:76px 1fr;gap:14px}
@@ -347,7 +349,7 @@ footer{background:#081f42;color:#fff}
   <div class="wrap">
     <p class="label">講師紹介</p>
     <div class="lecturer">
-      <div class="av" aria-hidden="true"><svg viewBox="0 0 80 44"><use href="#muse"/></svg></div>
+      <div class="av"><img src="assets/lecturer.webp" alt="講師 大川のイラスト" width="480" height="480" loading="lazy"></div>
       <div>
         <h3>大川<small>（オオカワ）</small></h3>
         <p>佐賀でAI漫画販促とAI活用支援を行い、IT・AIが苦手な起業家・個人事業主・店舗経営者を支援。AI漫画の販促制作100件以上、行政向け制作実績あり。AIスクール講師。</p>
