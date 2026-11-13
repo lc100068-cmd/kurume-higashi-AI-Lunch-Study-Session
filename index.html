@@ -304,6 +304,31 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offs
 .participation-note{font-size:13px;font-weight:700;color:var(--blue);margin-top:14px;line-height:1.8}
 .payment-note{font-size:13px;color:var(--muted);margin-top:6px}
 @media(max-width:640px){.participation-note{font-size:12px}}
+
+/* 実際の制作例：再生するまで動画本体を読み込まない */
+#demos{background:#fff;padding-top:64px}
+.demo-help{font-size:13px;color:var(--muted);margin-top:12px}
+.demo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px;align-items:start}
+.demo-card{min-width:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+.demo-screen{background:#101319;padding:12px 12px 8px;position:relative}
+.demo-screen video{display:block;width:100%;height:auto;aspect-ratio:9/20;background:#101319;object-fit:contain;border-radius:8px}
+.demo-duration{display:block;font-size:11px;color:#d8e2f1;text-align:center;margin-top:8px}
+.demo-copy{padding:18px 16px 20px}
+.demo-category{font-size:12px!important;font-weight:700;color:var(--blue)!important;margin-bottom:6px}
+.demo-copy h3{font-size:18px;line-height:1.5;color:var(--navy);font-weight:900;margin-bottom:10px}
+.demo-copy p{font-size:14px;color:var(--muted);line-height:1.85}
+.demo-next{display:inline-flex;align-items:center;gap:16px;margin-top:24px;font-size:15px;font-weight:700;text-underline-offset:5px}
+@media(max-width:1000px){
+ .demo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ .demo-screen video{height:360px;aspect-ratio:auto}
+}
+@media(max-width:520px){
+ #demos{padding-top:48px}
+ .demo-grid{grid-template-columns:1fr;gap:24px}
+ .demo-screen video{height:380px}
+ .demo-copy{padding:18px 20px 22px}
+ .demo-copy h3{font-size:20px}
+}
 </style>
 </head>
 <body>
@@ -379,6 +404,60 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offs
 </header>
 
 <main>
+
+<section id="demos" aria-labelledby="demos-title">
+  <div class="wrap">
+    <p class="label">制作例を動画で見る</p>
+    <h2 id="demos-title">「こんなのが欲しい」を、<br>こんな形に。</h2>
+    <p class="section-lead">Museで作った試作アプリの操作デモです。SNS運用・事務・店舗の仕事・交流の記録。あなたの仕事なら、何を作ってみたいですか？</p>
+    <p class="demo-help">各動画の再生ボタンからご覧いただけます。音声はありません。</p>
+    <div class="demo-grid">
+      <article class="demo-card">
+        <div class="demo-screen">
+          <video controls playsinline preload="none" poster="assets/demos/threads-dashboard.jpg" aria-label="Threads投稿管理の操作デモ（約35秒）">
+            <source src="assets/demos/threads-dashboard.mp4" type="video/mp4">
+            動画を再生できない場合は、<a href="assets/demos/threads-dashboard.mp4">操作デモを開く</a>をご利用ください。
+          </video>
+          <span class="demo-duration">約35秒・操作デモ</span>
+        </div>
+        <div class="demo-copy"><p class="demo-category">SNS運用</p><h3>Threads投稿管理</h3><p>SNSの下書きや承認状況を一覧に。投稿前の確認をまとめる画面の制作例です。</p></div>
+      </article>
+      <article class="demo-card">
+        <div class="demo-screen">
+          <video controls playsinline preload="none" poster="assets/demos/receipt-manager.jpg" aria-label="領収書管理アプリの操作デモ（約22秒）">
+            <source src="assets/demos/receipt-manager.mp4" type="video/mp4">
+            動画を再生できない場合は、<a href="assets/demos/receipt-manager.mp4">操作デモを開く</a>をご利用ください。
+          </video>
+          <span class="demo-duration">約22秒・操作デモ</span>
+        </div>
+        <div class="demo-copy"><p class="demo-category">日々の事務</p><h3>領収書管理アプリ</h3><p>月ごとの支出・科目別内訳をひと目で確認。記録を見返せる管理画面の制作例です。</p></div>
+      </article>
+      <article class="demo-card">
+        <div class="demo-screen">
+          <video controls playsinline preload="none" poster="assets/demos/salon-customer-records.jpg" aria-label="サロン向け顧客カルテの操作デモ（約30秒）">
+            <source src="assets/demos/salon-customer-records.mp4" type="video/mp4">
+            動画を再生できない場合は、<a href="assets/demos/salon-customer-records.mp4">操作デモを開く</a>をご利用ください。
+          </video>
+          <span class="demo-duration">約30秒・操作デモ</span>
+        </div>
+        <div class="demo-copy"><p class="demo-category">店舗の仕事</p><h3>サロン向け顧客カルテ</h3><p>予約や来店履歴、声をかけたいお客様を一覧に。サンプル顧客を使った操作例です。</p></div>
+      </article>
+      <article class="demo-card">
+        <div class="demo-screen">
+          <video controls playsinline preload="none" poster="assets/demos/contact-followup.jpg" aria-label="会った人の記録とフォローの操作デモ（約36秒）">
+            <source src="assets/demos/contact-followup.mp4" type="video/mp4">
+            動画を再生できない場合は、<a href="assets/demos/contact-followup.mp4">操作デモを開く</a>をご利用ください。
+          </video>
+          <span class="demo-duration">約36秒・操作デモ</span>
+        </div>
+        <div class="demo-copy"><p class="demo-category">交流・営業</p><h3>会った人の記録とフォロー</h3><p>会った相手や会話のメモ、次に連絡する予定を整理。つながりを見返せる画面の制作例です。</p></div>
+      </article>
+    </div>
+    <p class="example-note">動画は試作版の制作例です。講座では、Museの無料プランの範囲で、各自のSNS投稿やオリジナルツール・アプリ作りに取り組みます。</p>
+    <a class="demo-next" href="#contents">当日作るもの・体験の流れを見る <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
 <section id="worries">
   <span class="deco" style="width:56px;height:40px;right:4%;top:60px"><svg><use href="#i-mail"/></svg></span>
   <div class="wrap">
