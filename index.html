@@ -368,6 +368,59 @@ html.modal-open{overflow:hidden}
  .jolly-bubble{top:6%;width:42%;min-width:140px;max-width:180px;font-size:clamp(12px,3.4vw,15px)}
  .hero-grid{margin-top:12px}
 }
+
+/* スマホ向けに情報量を整理 */
+.ov-time{list-style:none;margin-top:6px;display:grid;gap:2px}
+.ov-time li{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.ov-time b{font-family:var(--serif);color:var(--blue);font-weight:700;min-width:52px}
+.ov-time small{display:block;width:100%;padding-left:64px;color:var(--muted);font-size:13px;line-height:1.5}
+.overview .map{font-size:14px;margin-left:6px;white-space:nowrap}
+.overview br.sp{display:none}
+details.more{margin-top:14px}
+details.more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:700;font-size:14px;padding:6px 0}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:"＋";font-size:13px}
+details.more[open]>summary::after{content:"－"}
+details.more-block>summary{margin-top:10px;border:1px solid var(--line);border-radius:999px;padding:8px 18px;background:#fff}
+@media(min-width:861px){details.more>summary{display:none}details.more{margin-top:0}}
+@media(max-width:640px){
+  section{padding:48px 0}
+  h2{margin-bottom:18px}
+  .info{display:none}
+  .hero-inner{padding-bottom:20px}
+  .lead br.pc{display:none}
+  .demo-copy p{display:none}
+  .demo-copy{padding:10px 12px 12px}
+  .demo-copy h3{margin-bottom:0}
+  .example-note{font-size:11.5px}
+  /* お悩み：見出しだけの2列に */
+  .worries{grid-template-columns:1fr 1fr;gap:10px}
+  .worry{flex-direction:column;gap:8px;padding:14px 12px}
+  .worry .ic{width:36px;height:36px}
+  .worry h3{font-size:14px;line-height:1.45}
+  .worry p{display:none}
+  .closing{font-size:15px;margin-top:20px}
+  /* 当日作るもの */
+  .usecases{gap:12px}
+  .usecases .point{padding:18px 16px}
+  .usecases .point h3{font-size:18px;margin:8px 0 4px}
+  .usecases .point h3 br{display:none}
+  .usecases .point .request{margin-top:6px}
+  .usecases .point .result{margin-top:12px}
+  .takeaways{margin-top:22px}
+  /* Muse */
+  .muse-copy{margin-bottom:14px}
+  .muse-body{font-size:15px;line-height:1.9}
+  .muse-body br{display:none}
+  details.more-block .points{margin-top:16px}
+  .contrast{margin-top:20px;padding:16px 18px;font-size:15px}
+  /* 講師 */
+  .lecturer .av{width:140px;height:140px}
+  /* 開催概要 */
+  .overview br.sp{display:inline}
+  .ov-time small{padding-left:0}
+  .faq summary{font-size:15px;padding:13px 0}
+}
 </style>
 </head>
 <body>
@@ -394,7 +447,7 @@ html.modal-open{overflow:hidden}
         <p class="audience">久留米周辺の経営者・個人事業主の方へ</p>
         <h1>SNS投稿も、<br>自分だけのツールも。<br><span class="ai">AIと一緒に作ろう。</span></h1>
         <p class="event-name">AI初心者向け｜ランチAI勉強会</p>
-        <p class="lead">「こんなのが欲しい」を、言葉にするところから。<br>AI「Muse」を使い、自分のSNS投稿やオリジナルツール・アプリを実際に作ることを目指す体験型の勉強会です。</p>
+        <p class="lead">AI「Muse」に「こんなのが欲しい」と伝えて、<br class="pc">SNS投稿やツール・アプリを実際に作る体験型の勉強会です。</p>
         <p class="participation-note">AI初心者歓迎 ／ 事前のMuse登録不要 ／ 無料プランの範囲で体験</p>
         <ul class="hero-facts" aria-label="開催情報">
           <li><b>12/3（木）</b>13:00受付・14:00セミナー開始</li>
@@ -513,20 +566,26 @@ html.modal-open{overflow:hidden}
       <article class="point">
         <p class="n">01</p><h3>自分の仕事に使う<br>SNS投稿を作る</h3>
         <p>お店やサービスの魅力を伝える投稿を。</p>
+        <details class="more"><summary>頼み方の例を見る</summary>
         <p class="request"><span>こんなふうに頼む</span>「私のお店の特徴をもとに、来週のSNS投稿を作って」</p>
         <p class="result"><b>目指すゴール</b>自分の仕事に合う投稿を作り、伝えたい内容に整える。</p>
+        </details>
       </article>
       <article class="point">
         <p class="n">02</p><h3>仕事を助ける<br>オリジナルツールを作る</h3>
         <p>日々の小さな手間を、自分に合う仕組みに。</p>
+        <details class="more"><summary>頼み方の例を見る</summary>
         <p class="request"><span>こんなふうに頼む</span>「人数と単価を入れると、合計金額が分かるツールを作って」</p>
         <p class="result"><b>目指すゴール</b>使いたい機能を伝えて、作ったツールを動かしてみる。</p>
+        </details>
       </article>
       <article class="point">
         <p class="n">03</p><h3>「あったら便利」を<br>小さなアプリにする</h3>
         <p>頭の中のアイデアを、使える形に。</p>
+        <details class="more"><summary>頼み方の例を見る</summary>
         <p class="request"><span>こんなふうに頼む</span>「やることを追加して、終わったらチェックできるアプリを作って」</p>
         <p class="result"><b>目指すゴール</b>画面や動きを確かめ、使いやすくするための修正も頼んでみる。</p>
+        </details>
       </article>
     </div>
     <p class="example-note">上の頼み方や制作物は一例です。作る内容は、各自の仕事や関心に合わせて考えます。</p>
@@ -534,7 +593,27 @@ html.modal-open{overflow:hidden}
       <h3>自分で作るための、3つのステップ</h3>
       <ul><li>作りたいもの・使う場面を言葉にする</li><li>Museに頼んで、形にしてみる</li><li>仕上がりや動きを確認して、直したいことを伝える</li></ul>
     </div>
-    <p class="note">Museの事前登録は不要です。当日は無料プランの範囲で制作を体験します。無料プランには利用上限があるため、その範囲に合わせて進めます。</p>
+  </div>
+</section>
+
+<section id="muse">
+  <span class="deco" style="width:96px;height:60px;right:6%;top:70px"><svg><use href="#i-cloud"/></svg></span>
+  <span class="deco" style="width:64px;height:54px;right:3%;top:380px"><svg><use href="#i-chat"/></svg></span>
+  <span class="deco" style="width:44px;height:52px;left:1%;top:420px"><svg><use href="#i-doc"/></svg></span>
+  <div class="wrap">
+    <div class="muse-head"><svg class="muse-logo" viewBox="0 0 80 44" aria-hidden="true"><use href="#muse-logo"/></svg><p>Muse（ミューズ）とは</p></div>
+    <p class="muse-copy">頼みごとを、<br class="sp">作業へつなぐAI。</p>
+    <p class="muse-body">調べものも、予定の確認も、SNSの投稿も。<br>Museは、日々の仕事をサポートするパーソナルAIエージェント。<br>連携するアプリや操作の権限は、自分で設定できます。</p>
+
+    <details class="more more-block"><summary>Museの特徴を見る</summary>
+    <div class="points">
+      <div class="point"><p class="n">01</p><h3>アメリカで話題の<br>新しいAI</h3><p>InstagramやFacebookを運営するMeta社のAIエージェント。2026年9月にアメリカで登場し、日本でも提供が始まったばかりです。</p></div>
+      <div class="point"><p class="n">02</p><h3>答えるだけじゃなく、<br>実行する</h3><p>カレンダー・メール・SNSと連携して、質問に答えるだけでなく、実際の作業まで進めてくれます。</p></div>
+      <div class="point"><p class="n">03</p><h3>任せる範囲を、<br>自分で決める</h3><p>連携先やアクセス権限を自分で選び、送信などの重要な操作は承認設定を確認しながら使います。作成された文章や内容も、自分で確かめることが大切です。</p></div>
+    </div>
+    </details>
+    <p class="contrast">答えるAIから、実行するAIへ。仕事を手伝ってもらう使い方を、実演で紹介します。</p>
+    <p class="source-link"><a href="https://ai.meta.com/muse/" target="_blank" rel="noopener">Museの機能・利用プランを公式サイトで確認する ↗</a></p>
   </div>
 </section>
 
@@ -554,54 +633,21 @@ html.modal-open{overflow:hidden}
   </div>
 </section>
 
-<section class="tint" id="muse">
-  <span class="deco" style="width:96px;height:60px;right:6%;top:70px"><svg><use href="#i-cloud"/></svg></span>
-  <span class="deco" style="width:64px;height:54px;right:3%;top:380px"><svg><use href="#i-chat"/></svg></span>
-  <span class="deco" style="width:44px;height:52px;left:1%;top:420px"><svg><use href="#i-doc"/></svg></span>
-  <div class="wrap">
-    <div class="muse-head"><svg class="muse-logo" viewBox="0 0 80 44" aria-hidden="true"><use href="#muse-logo"/></svg><p>Muse（ミューズ）とは</p></div>
-    <p class="muse-copy">頼みごとを、<br class="sp">作業へつなぐAI。</p>
-    <p class="muse-body">調べものも、予定の確認も、SNSの投稿も。<br>Museは、日々の仕事をサポートするパーソナルAIエージェント。<br>連携するアプリや操作の権限は、自分で設定できます。</p>
-
-    <div class="points">
-      <div class="point"><p class="n">01</p><h3>アメリカで話題の<br>新しいAI</h3><p>InstagramやFacebookを運営するMeta社のAIエージェント。2026年9月にアメリカで登場し、日本でも提供が始まったばかりです。</p></div>
-      <div class="point"><p class="n">02</p><h3>答えるだけじゃなく、<br>実行する</h3><p>カレンダー・メール・SNSと連携して、質問に答えるだけでなく、実際の作業まで進めてくれます。</p></div>
-      <div class="point"><p class="n">03</p><h3>任せる範囲を、<br>自分で決める</h3><p>連携先やアクセス権限を自分で選び、送信などの重要な操作は承認設定を確認しながら使います。作成された文章や内容も、自分で確かめることが大切です。</p></div>
-    </div>
-    <p class="contrast">答えるAIから、実行するAIへ。仕事を手伝ってもらう使い方を、実演で紹介します。</p>
-    <p class="source-link"><a href="https://ai.meta.com/muse/" target="_blank" rel="noopener">Museの機能・利用プランを公式サイトで確認する ↗</a></p>
-  </div>
-</section>
-
-<section id="schedule">
-  <div class="wrap">
-    <p class="label">タイムスケジュール</p>
-    <h2>12月3日（木）当日の流れ</h2>
-    <ol class="timeline">
-      <li><time>13:00</time><div>受付開始</div></li>
-      <li><time>13:30</time><div>ランチタイム<small>交流しながらお食事を楽しみます</small></div></li>
-      <li><time>14:00</time><div>セミナー開始<small>Museの実演と、SNS投稿・ツール・アプリ作り</small></div></li>
-      <li><time>15:30</time><div>終了</div></li>
-      <li><time>16:00</time><div>退出</div></li>
-    </ol>
-  </div>
-</section>
-
 <section id="overview">
   <span class="deco" style="width:46px;height:40px;right:4%;top:90px"><svg><use href="#i-bars"/></svg></span>
   <div class="wrap">
     <p class="label">開催概要</p>
+    <h2>12月3日（木）の開催概要</h2>
     <table class="overview">
       <tr><th>イベント名</th><td>ランチAI勉強会</td></tr>
-      <tr><th>日時</th><td>2026年12月3日（木）<br>13:00 受付／13:30 ランチ交流会<br>14:00〜15:30 セミナー／16:00 退出</td></tr>
-      <tr><th>会場</th><td>久留米シティプラザ 小会議室（久留米市六ツ門町8-1）</td></tr>
-      <tr><th>参加費</th><td>2,000円（お弁当付き）／当日、会場にてお支払い</td></tr>
-      <tr><th>事前準備</th><td>スマートフォンをご持参ください。Museの事前登録は不要です。</td></tr>
-      <tr><th>利用プラン</th><td>Museの無料プランの範囲で体験します。</td></tr>
+      <tr><th>日時</th><td>2026年12月3日（木）
+        <ul class="ov-time"><li><b>13:00</b>受付開始</li><li><b>13:30</b>ランチ交流会</li><li><b>14:00</b>セミナー<small>Museの実演と、SNS投稿・ツール・アプリ作り</small></li><li><b>15:30</b>終了<small>16:00 退出</small></li></ul></td></tr>
+      <tr><th>会場</th><td>久留米シティプラザ 小会議室<br>（久留米市六ツ門町8-1）<a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B9%85%E7%95%99%E7%B1%B3%E3%82%B7%E3%83%86%E3%82%A3%E3%83%97%E3%83%A9%E3%82%B6" target="_blank" rel="noopener">地図を見る</a></td></tr>
+      <tr><th>参加費</th><td>2,000円（お弁当付き）<br>当日、会場にてお支払いください</td></tr>
+      <tr><th>持ち物</th><td>スマートフォン<br>Museの事前登録は不要です。当日は無料プランの範囲で体験します。</td></tr>
       <tr><th>キャンセル</th><td>お弁当の準備があるため、開催3日前の11月30日（月）までに主催者へご連絡ください。</td></tr>
       <tr><th>定員</th><td>20名</td></tr>
-      <tr><th>主催</th><td>久留米市東倫理法人会</td></tr>
-      <tr><th>お問合せ</th><td><a href="tel:0942407250">0942-40-7250</a>（久留米市東倫理法人会）</td></tr>
+      <tr><th>主催・<br class="sp">お問合せ</th><td>久留米市東倫理法人会<br><a href="tel:0942407250">0942-40-7250</a></td></tr>
     </table>
   </div>
 </section>
@@ -616,10 +662,7 @@ html.modal-open{overflow:hidden}
       <details><summary>Museの事前登録は必要ですか？</summary><p class="a">事前登録は不要です。当日はスマートフォンをご持参ください。</p></details>
       <details><summary>Museの有料プランへの加入は必要ですか？</summary><p class="a">有料プランへの加入は必要ありません。当日は無料プランの範囲で体験します。無料プランには利用上限があります。</p></details>
       <details><summary>当日は何を作りますか？</summary><p class="a">SNS投稿や、自分の仕事に役立つオリジナルツール・アプリの制作に取り組みます。作りたいものを言葉でMuseに伝え、作成・動作確認・修正を体験します。</p></details>
-      <details><summary>参加費と開催時間を教えてください。</summary><p class="a">参加費は2,000円（お弁当付き）です。13:00受付、13:30ランチ交流会、14:00〜15:30セミナー、16:00退出の予定です。</p></details>
-      <details><summary>参加費はどのように支払いますか？</summary><p class="a">参加費2,000円は当日、会場でお支払いください。お弁当代を含みます。</p></details>
       <details><summary>主催団体の紹介はありますか？</summary><p class="a">当日は、主催の久留米市東倫理法人会の活動や、地域の経営者と学び合い、つながる場としての魅力をご紹介する場合があります。会員以外の方もご参加いただける勉強会です。</p></details>
-      <details><summary>申し込みはどうすればいいですか？</summary><p class="a">申込ボタンからGoogleフォームにお進みください。定員は20名です。事前に確認したいことは、主催の久留米市東倫理法人会（0942-40-7250）へお問い合わせください。</p></details>
     </div>
   </div>
 </section>
@@ -665,6 +708,12 @@ html.modal-open{overflow:hidden}
 <div class="sticky" id="sticky"><a class="cta" href="https://forms.gle/GLARXPy4xrpaPx6F6" target="_blank" rel="noopener">2,000円・お弁当付き｜申し込む<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
 <script>
+// パソコンでは「詳しく見る」を常に開いた状態にする
+(function(){
+  var mq=window.matchMedia('(min-width:861px)');
+  function sync(){ [].forEach.call(document.querySelectorAll('details.more'),function(d){ d.open=mq.matches; }); }
+  sync(); if(mq.addEventListener) mq.addEventListener('change',sync);
+})();
 // 申込ボタンが画面内にあるときは、スマホ用の固定ボタンを隠す
 (function(){
   var bar=document.getElementById('sticky');
