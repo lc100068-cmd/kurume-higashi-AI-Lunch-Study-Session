@@ -37,10 +37,14 @@ a{color:var(--blue)}
 .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--sky2) 100%)}
 .hero-inner{position:relative;max-width:1080px;margin:0 auto;padding:28px 24px 0;min-height:600px}
 .org{position:relative;z-index:2;display:inline-block;font-weight:700;color:var(--navy);font-size:15px;letter-spacing:.06em;padding-bottom:10px;border-bottom:1.5px solid var(--navy);min-width:min(460px,100%)}
-.hero-photo{position:absolute;top:0;right:0;width:56%;max-width:600px;z-index:1;
+.hero-visual{position:absolute;top:0;right:0;width:56%;max-width:600px;z-index:1}
+.hero-photo{position:relative;width:100%;
   -webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%),linear-gradient(to bottom,#000 70%,transparent 100%);
   -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 22%),linear-gradient(to bottom,#000 70%,transparent 100%);mask-composite:intersect}
 .hero-photo img{width:100%;height:auto}
+.jolly-bubble{position:absolute;top:clamp(42px,6vw,70px);right:10px;width:clamp(160px,19vw,208px);aspect-ratio:240/166;display:flex;align-items:center;justify-content:center;padding:12px 12px 22px;text-align:center;color:var(--navy);font-size:clamp(14px,1.55vw,17px);font-weight:700;line-height:1.5;white-space:nowrap;isolation:isolate}
+.jolly-bubble svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;overflow:visible;filter:drop-shadow(0 4px 8px rgba(11,42,85,.08))}
+.jolly-bubble strong{display:block;color:var(--blue);font-size:1.12em;font-weight:900;white-space:nowrap}
 .hero-copy{position:relative;z-index:2;max-width:640px}
 h1{font-weight:900;color:var(--navy);font-size:clamp(64px,10.4vw,124px);line-height:1.06;letter-spacing:-.01em;margin-top:22px}
 h1 .ai{letter-spacing:-.04em}
@@ -182,9 +186,11 @@ footer{background:#081f42;color:#fff}
 
 @media (max-width:860px){
   .hero-inner{min-height:0;padding-top:20px}
-  .hero-photo{position:relative;width:calc(100% + 48px);max-width:none;margin:14px -24px 0;
+  .hero-visual{position:relative;width:calc(100% + 48px);max-width:none;margin:14px -24px 0}
+  .hero-photo{
     -webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,transparent 100%)}
   .hero-photo img{height:min(72vw,360px);object-fit:cover;object-position:50% 20%}
+  .jolly-bubble{top:7%;right:3%;width:clamp(148px,30vw,224px);font-size:clamp(13px,2.2vw,18px)}
   h1{margin-top:-34px}
   .deco{display:none}
   .info{grid-template-columns:1fr;gap:22px;padding:24px 22px}
@@ -195,7 +201,8 @@ footer{background:#081f42;color:#fff}
 }
 @media (max-width:640px){
   .wrap,.hero-inner{padding-left:16px;padding-right:16px}
-  .hero-photo{width:calc(100% + 32px);margin:12px -16px 0}
+  .hero-visual{width:calc(100% + 32px);margin:12px -16px 0}
+  .jolly-bubble{right:2%;width:44%;min-width:148px;max-width:216px;font-size:clamp(12px,3.3vw,18px)}
   .org{font-size:13px}
   section{padding:64px 0}
   .worries,.contents{grid-template-columns:1fr}
@@ -240,7 +247,13 @@ footer{background:#081f42;color:#fff}
   <span class="deco" style="width:54px;height:46px;right:3%;bottom:40px"><svg><use href="#i-doc"/></svg></span>
   <div class="hero-inner">
     <p class="org">主催：久留米市東倫理法人会</p>
-    <div class="hero-photo"><img src="assets/muse-hero.webp" alt="ヘッドホンをつけてノートパソコンに向かう、ふわふわのMuseのキャラクター" width="479" height="410"></div>
+    <div class="hero-visual">
+      <div class="hero-photo"><img src="assets/muse-hero.webp" alt="ヘッドホンをつけてノートパソコンに向かう、ふわふわのMuseのマスコット、Jolly（ジョリー）" width="479" height="410"></div>
+      <p class="jolly-bubble">
+        <svg viewBox="0 0 240 166" aria-hidden="true" focusable="false"><path d="M40 125C20 112 8 95 8 77C8 37 58 5 120 5S232 37 232 77S182 149 120 149C98 149 77 145 60 138L18 158L40 125Z" fill="#fff" stroke="#1667e8" stroke-width="3" stroke-linejoin="round"/></svg>
+        <span>Museのマスコット、<strong>Jolly（ジョリー）</strong>です！</span>
+      </p>
+    </div>
     <div class="hero-copy">
       <h1>ランチ<span class="ai">AI</span><br>勉強会</h1>
       <div class="catch-rule"></div>
@@ -427,3 +440,4 @@ footer{background:#081f42;color:#fff}
 </script>
 </body>
 </html>
+
